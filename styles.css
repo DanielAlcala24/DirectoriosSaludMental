@@ -18,10 +18,18 @@ body {
 h2{
     text-align: center;
 }
+
+.image-container {
+    display: flex; /* Alinea los elementos hijos en fila */
+    justify-content: space-around; /* Espacio entre las imágenes */
+    align-items: center; /* Alinea verticalmente al centro */
+    flex-wrap: wrap; /* Hace que las imágenes se ajusten y salten de línea si es necesario */
+    gap: 1px; /* Espacio entre las imágenes */
+}
 .logo {
     display: block;
     margin: 0 auto 20px;
-    max-width: 200px;
+    max-width: 55px;
 }
 .button-container{
     text-align: center;
@@ -152,4 +160,10 @@ a:hover {
     .scroll-indicator-right {
         display: none;
     } 
+}
+
+@media screen and (min-width: 600px) {
+    .logo {
+        max-width: 100px; /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+    }
 }
